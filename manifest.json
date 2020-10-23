@@ -1,0 +1,60 @@
+{
+  "Actions": [
+    {
+      "Icon": "images/allOn@2x",
+      "Name": "Rotate Light",
+      "PropertyInspectorPath": "property_inspector/property_inspector.html",
+      "States": [
+        {
+          "Image": "images/allOn@2x",
+          "TitleAlignment": "bottom",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Tooltip": "Toggle openhab light on or off",
+      "UUID": "tocsoft.streamdeck.openhab.switch"
+    },
+    {
+      "Icon": "images/allOffSingle@2x",
+      "Name": "Switch Light",
+      "PropertyInspectorPath": "property_inspector/single_property_inspector.html",
+      "States": [
+        {
+          "Image": "images/allOffSingle@2x",
+          "TitleAlignment": "bottom",
+          "FontSize": "16"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Tooltip": "Toggle single color of trafic light on or off",
+      "UUID": "tocsoft.streamdeck.openhab.singleColorToggle"
+    }
+  ],
+
+  "Category": "Openhab",
+  "CategoryIcon": "images/allOn@2x",
+  "Disabled": false,
+  "Author": "Scott Williams",
+  "CodePathWin": "BusyLightStreamDeckAction.exe",
+  "CodePathMac": "BusyLightStreamDeckAction",
+  "Description": "Description of MyPlugin.",
+  "Name": "PiLight Control",
+  "Icon": "images/allOn@2x",
+  "URL": "https://github.com/tocsoft/PiLight",
+  "Version": "1.0",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "4.1"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ]
+}
