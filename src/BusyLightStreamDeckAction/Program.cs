@@ -24,6 +24,12 @@ namespace Tocsoft.BusyLightStreamDeckAction
                     {
                         a.Name = "Office Busy Light";
                     });
+
+                    c.AddAction<ToggleHandler>(a =>
+                    {
+                        a.Name = "Toggle Light";
+
+                    });
                 });
     }
 }

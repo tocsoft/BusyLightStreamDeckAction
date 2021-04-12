@@ -67,7 +67,7 @@ namespace Tocsoft.BusyLightStreamDeckAction
 
                                 await Task.WhenAll(tasks);
                             }
-                            catch (Exception ex)
+                            catch
                             {
                                 client = null;
                             }
@@ -132,6 +132,12 @@ namespace Tocsoft.BusyLightStreamDeckAction
             var response = await client.PutAsync($"http://{Url}/rest/items/{item}/state/", new StringContent(value ?? ""));
 
             // TODO push out updates to all monitors with the new state!!!
+        }
+
+        public async Task Trigger(string item, string value)
+        {
+            client ??= new HttpClient();
+            var response = await client.PostAsync($"http://{Url}/rest/items/{item}/", new StringContent(value ?? ""));
         }
 
         private class MonitorDisposable : IDisposable
